@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACME</title>
+    <style>
+        html {
+            background-color: #3a3a3a;
+            color: #fff;
+        }
+        .foo {
+            border: 1px solid #000;
+            margin: 0px auto;
+            padding: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>The foos and the bars:</h1>
+    {% if not objects %}
+        <p>No foos</p>
+    {% else %}
+        <ol>
+        {% for foo in objects %}
+            <li>{{ foo.text }}</li>
+            {% if foo.bars %}
+            <ul>
+                {% for bar in foo.bars.all %}
+                    <li>{{ bar.text }}</li>
+                {% endfor %}
+            {% endif %}
+            </ul>
+        {% endfor %}
+        </ol>
+    {% endif %}
+</body>
+</html>
