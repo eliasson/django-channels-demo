@@ -26,20 +26,23 @@ Make sure you got Python3 installed in your
     # Run the server
     $ make run
 
-Now you should have a server running on port http://localhost:8000
+Now you should have a server running on port
+[http://localhost:8000/](http://localhost:8000)
 
 
 ### Available resources
 
 #### Standard server-side templates
 
-The root page at http://localhost:8000/ is just a list of the existing Foo's
-in the database (those created with `python manage.py test_data` command).
+The root page at [http://localhost:8000/](http://localhost:8000/) is just a
+list of the existing Foo's in the database (those created with
+`python manage.py test_data` command).
 
 
 #### Django Admin
 
-The standard Django Admin is available at http://localhost:8000/admin
+The standard Django Admin is available at
+[http://localhost:8000/admin](http://localhost:8000/admin)
 (login using the account created with `python manage.py createsuperuser`).
 
 Here you can browse the available models.
@@ -48,8 +51,8 @@ Here you can browse the available models.
 #### Django REST framework
 
 The browsable API generated form Django REST framework is available under
-http://localhost:8000/api (in order to create or update objects you need to be
-logged in).
+[http://localhost:8000/api](http://localhost:8000/api) (in order to create or
+update objects you need to be logged in).
 
 The actual JSON API is available under the same URL (using content negotiation)
 by running the `http` tool:
@@ -59,7 +62,8 @@ by running the `http` tool:
 
 #### Django channels
 
-You can access the Django Channels from the root URL http://localhost:8000.
+You can access the Django Channels from the root URL
+[http://localhost:8000](http://localhost:8000).
 
 1. You need up open the Browser Developer console
 
@@ -75,8 +79,9 @@ You can access the Django Channels from the root URL http://localhost:8000.
         ws.send("Hello, World!");
 
 5. You sound now se the message popping up in all browser windows. As well as
-   be visible in Django Admin at http://localhost:8000/admin/demo/chatmessage/
-   and via the REST API at http://localhost:8000/api/chat/
+   be visible in Django Admin at
+   [http://localhost:8000/admin/demo/chatmessage/](http://localhost:8000/admin/demo/chatmessage/)
+   and via the REST API at [http://localhost:8000/api/chat/](http://localhost:8000/api/chat/)
 
 That's it!
 
@@ -85,12 +90,12 @@ That's it!
 
 The files of most interests are:
 
-| File             | Description                                         |
-| -----------------|-----------------------------------------------------|
-| demo/models.py   | Implements all database models                      |
-| demo/rest.py     | Implements the DRF serializers and view             |
-| demo/channels.py | Implements the Channel consumers and setups routing |
-| acme/settings.py | Adds and configures DRF and Channels apps           |
+| File              | Description                                         |
+| ------------------|-----------------------------------------------------|
+| demo/models.py    | Implements all database models                      |
+| demo/rest.py      | Implements the DRF serializers and view             |
+| demo/channels.py  | Implements the Channel consumers and setups routing |
+| acme/settings.py  | Adds and configures DRF and Channels apps           |
 
 
 ## License
